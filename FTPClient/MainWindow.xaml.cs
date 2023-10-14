@@ -135,12 +135,11 @@ namespace FTPClient
                                     }
                                 }
                                 Console.WriteLine($"FTP總共上傳{upload_file_number}檔案!");
-                                
                             });
                         }
                         else
                         {
-                            MessageBox.Show("請確認本端與上傳ftp路徑最後一層資料夾名稱相同!", "警告", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                            MessageBox.Show("請確認本端與上傳ftp路徑最後一層資料夾名稱相同!", "警告", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                         }
                         break;
                     }
