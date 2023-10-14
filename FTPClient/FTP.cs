@@ -18,6 +18,17 @@ namespace FTPClient
         public string ftpUser { get; set; }
         public string ftpPassword { get; set; }
         public string ftpRootURL { get; set; }
+        public string ip { get; set; }
+        public string port { get; set; }
+
+        public FTP(string _ftpUser, string _ftpPassword, string _ip, string _port)
+        {
+            ftpUser = _ftpUser;
+            ftpPassword = _ftpPassword;
+            ip = _ip;
+            port = _port;
+            ftpRootURL = "ftp://" + ip + (string.IsNullOrEmpty(_port) ? "" : ":" + port);
+        }
 
         public bool FileUpload(FileInfo localFile, string ftpPath, string ftpFileName)
         {

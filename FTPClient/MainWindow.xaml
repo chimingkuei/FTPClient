@@ -43,20 +43,22 @@
         <TabControl HorizontalAlignment="Left" Margin="5,8,0,0" VerticalAlignment="Top" Height="478" Width="978" Background="#FFE6F0FF" Grid.Row="0">
             <TabItem Header="主畫面" Style="{StaticResource BaseTabcontrol}">
                 <Grid>
-                    <StackPanel Orientation="Horizontal" Margin="0,80,7,307">
-                        <Label x:Name="Host_Label" Content="主機:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="105,0,0,0"/>
-                        <TextBox x:Name="Host" Style="{StaticResource BaseTextBox1}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="140" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,14,0,0"/>
-                        <Label x:Name="UserName_Label" Content="使用者:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="105,0,0,0"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,80,1,307">
+                        <Label x:Name="Host_Label" Content="主機:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="50,0,0,0"/>
+                        <TextBox x:Name="IP" Style="{StaticResource BaseTextBox1}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="140" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,14,0,0"/>
+                        <Label x:Name="UserName_Label" Content="使用者:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="50,0,0,0"/>
                         <TextBox x:Name="UserName" Style="{StaticResource BaseTextBox2}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="140" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,14,0,0"/>
-                        <Label x:Name="Password_Label" Content="密碼:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="105,0,0,0"/>
+                        <Label x:Name="Password_Label" Content="密碼:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="50,0,0,0"/>
                         <TextBox x:Name="Password" Style="{StaticResource BaseTextBox3}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="140" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,14,0,0"/>
-                     </StackPanel>
+                        <Label x:Name="Port_Label" Content="連接埠:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="50,0,0,0"/>
+                        <TextBox x:Name="Port" Style="{StaticResource BaseTextBox4}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="140" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,14,0,0"/>
+                    </StackPanel>
                     <WrapPanel Margin="1,167,2,65">
                         <Button x:Name="Open_Dir" Style="{StaticResource BaseButton}" Content="開啟資料夾" Width="80" Height="34" Margin="95,20,0,20" Click="Main_Btn_Click"/>
                         <Label x:Name="Local_Path_Label" Content="本端路徑:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5,20,0,20"/>
-                        <TextBox x:Name="Local_Path" Style="{StaticResource BaseTextBox4}" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="544" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,20,0,20"/>
+                        <TextBox x:Name="Local_Path" Style="{StaticResource BaseTextBox5}" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="544" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,20,0,20"/>
                         <Label x:Name="Ftp_Path_Label" Content="上傳FTP路徑:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="160,20,0,20"/>
-                        <TextBox x:Name="Ftp_Path" Style="{StaticResource BaseTextBox5}" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="544" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,20,0,20"/>
+                        <TextBox x:Name="Ftp_Path" Style="{StaticResource BaseTextBox6}" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="544" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,20,0,20"/>
                         <Button x:Name="Save_Config" Style="{StaticResource BaseButton}" Content="儲存參數" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="34" Margin="340,10,0,10" Click="Main_Btn_Click"/>
                         <Button x:Name="FileUpload" Style="{StaticResource BaseButton}" Content="檔案上傳" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Height="34"  Margin="90,10,0,10" Click="Main_Btn_Click"/>
                      </WrapPanel>

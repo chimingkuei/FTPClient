@@ -20,7 +20,8 @@ namespace FTPClient
 {
     public class Parameter
     {
-        public string Host_val { get; set; }
+        public string IP_val { get; set; }
+        public string Port_val { get; set; }
         public string UserName_val { get; set; }
         public string Password_val { get; set; }
         public string Local_Path_val { get; set; }
@@ -64,21 +65,44 @@ namespace FTPClient
                 control.Text = name;
             });
         }
-        #endregion
 
-        #region Parameter and Init
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        #region Config
+        private void LoadConfig()
         {
             List<Parameter> Parameter_info = Config.Load();
-            Host.Text = Parameter_info[0].Host_val;
+            IP.Text = Parameter_info[0].IP_val;
+            Port.Text = Parameter_info[0].Port_val;
             UserName.Text = Parameter_info[0].UserName_val;
             Password.Text = Parameter_info[0].Password_val;
             Local_Path.Text = Parameter_info[0].Local_Path_val;
             Ftp_Path.Text = Parameter_info[0].Ftp_Path_val;
         }
+
+        private void SaveConfig()
+        {
+            List<Parameter> Student_config = new List<Parameter>()
+                        {
+                            new Parameter() {IP_val = IP.Text,
+                                             Port_val = Port.Text,
+                                             UserName_val = UserName.Text,
+                                             Password_val=Password.Text,
+                                             Local_Path_val=Local_Path.Text,
+                                             Ftp_Path_val= Ftp_Path.Text
+                                             }
+                        };
+            Config.Save(Student_config);
+            Logger.WriteLog("儲存參數!", 1, richTextBoxGeneral);
+        }
+        #endregion
+        #endregion
+
+        #region Parameter and Init
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadConfig();
+        }
         BaseLogRecord Logger = new BaseLogRecord();
         BaseConfig<Parameter> Config = new BaseConfig<Parameter>();
-        FTP Do = new FTP();
         #endregion
 
         #region Main Screen
@@ -92,45 +116,75 @@ namespace FTPClient
                         {
                             Task.Run(() =>
                             {
-                                Do.ftpUser = TextBoxDispatcherGetValue(UserName);
-                                Do.ftpPassword = TextBoxDispatcherGetValue(Password);
-                                Do.ftpRootURL = "ftp://" + TextBoxDispatcherGetValue(Host);
+                                FTP Do = new FTP(TextBoxDispatcherGetValue(UserName), TextBoxDispatcherGetValue(Password), TextBoxDispatcherGetValue(IP), "23");
                                 string Ftp_Path_Invokval = TextBoxDispatcherGetValue(Ftp_Path);
+                                int upload_file_number = 0;
                                 if (Directory.Exists(TextBoxDispatcherGetValue(Local_Path)))
                                 {
                                     foreach (var (dirPath, subDirs, files) in Do.Walk(TextBoxDispatcherGetValue(Local_Path)))
                                     {
-                                        bool dirstate = Do.FolderCheckExist(Ftp_Path_Invokval, Regex.Split(dirPath, "Project")[1].Replace("\\", "/"));
-                                        if (dirstate)
-                                        {
-                                            Console.WriteLine($"FTP建立{Regex.Split(dirPath, "Project")[1].Replace("\\", "/")}");
-                                        }
-                                        else
-                                        {
-                                            Console.WriteLine($"FTP已有{Regex.Split(dirPath, "Project")[1].Replace("\\", "/")}");
-                                        }
-                                        //Console.WriteLine("目錄：" + Regex.Split(dirPath, "Project")[1].Replace("\\", "/"));
+                                        Do.FolderCheckExist(Ftp_Path_Invokval, Regex.Split(dirPath, "Project")[1].Replace("\\", "/"));
                                         foreach (string filePath in files)
                                         {
                                             bool filestate = Do.FileCheckExist(Ftp_Path_Invokval, Regex.Split(filePath, "Project")[1].Replace("\\", "/"));
-                                            if (filestate)
-                                            {
-                                                Console.WriteLine($"FTP已有{Regex.Split(filePath, "Project")[1].Replace("\\", "/") }");
-                                            }
-                                            else
+                                            if (!filestate)
                                             {
                                                 Do.FileUpload(new FileInfo(filePath), Ftp_Path_Invokval, Regex.Split(filePath, "Project")[1].Replace("\\", "/"));
+                                                upload_file_number++;
                                                 Console.WriteLine($"FTP建立{Regex.Split(filePath, "Project")[1].Replace("\\", "/") }");
                                             }
-                                            //Console.WriteLine("文件：" + Regex.Split(filePath, "Project")[1].Replace("\\", "/"));
                                         }
                                     }
+                                    Console.WriteLine($"FTP總共上傳{upload_file_number}檔案!");
                                 }
                                 else
                                 {
                                     MessageBox.Show("請確認本端路徑是否存在!", "警告", MessageBoxButton.YesNo, MessageBoxImage.Question);
                                 }
                             });
+                            #region Old Version
+                            //Task.Run(() =>
+                            //{
+                            //    FTP Do = new FTP(TextBoxDispatcherGetValue(UserName), TextBoxDispatcherGetValue(Password), TextBoxDispatcherGetValue(IP), "23");
+                            //    string Ftp_Path_Invokval = TextBoxDispatcherGetValue(Ftp_Path);
+                            //    int upload_file_number = 0;
+                            //    if (Directory.Exists(TextBoxDispatcherGetValue(Local_Path)))
+                            //    {
+                            //        foreach (var (dirPath, subDirs, files) in Do.Walk(TextBoxDispatcherGetValue(Local_Path)))
+                            //        {
+                            //            bool dirstate = Do.FolderCheckExist(Ftp_Path_Invokval, Regex.Split(dirPath, "Project")[1].Replace("\\", "/"));
+                            //            if (dirstate)
+                            //            {
+                            //                Console.WriteLine($"FTP建立{Regex.Split(dirPath, "Project")[1].Replace("\\", "/")}");
+                            //            }
+                            //            else
+                            //            {
+                            //                Console.WriteLine($"FTP已有{Regex.Split(dirPath, "Project")[1].Replace("\\", "/")}");
+                            //            }
+                            //            //Console.WriteLine("目錄：" + Regex.Split(dirPath, "Project")[1].Replace("\\", "/"));
+                            //            foreach (string filePath in files)
+                            //            {
+                            //                bool filestate = Do.FileCheckExist(Ftp_Path_Invokval, Regex.Split(filePath, "Project")[1].Replace("\\", "/"));
+                            //                if (filestate)
+                            //                {
+                            //                    Console.WriteLine($"FTP已有{Regex.Split(filePath, "Project")[1].Replace("\\", "/") }");
+                            //                }
+                            //                else
+                            //                {
+                            //                    Do.FileUpload(new FileInfo(filePath), Ftp_Path_Invokval, Regex.Split(filePath, "Project")[1].Replace("\\", "/"));
+                            //                    upload_file_number++;
+                            //                    Console.WriteLine($"FTP建立{Regex.Split(filePath, "Project")[1].Replace("\\", "/") }");
+                            //                }
+                            //                //Console.WriteLine("文件：" + Regex.Split(filePath, "Project")[1].Replace("\\", "/"));
+                            //            }
+                            //        }
+                            //    }
+                            //    else
+                            //    {
+                            //        MessageBox.Show("請確認本端路徑是否存在!", "警告", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                            //    }
+                            //});
+                            #endregion
                         }
                         else
                         {
@@ -147,17 +201,7 @@ namespace FTPClient
                     }
                 case nameof(Save_Config):
                     {
-                        List<Parameter> Student_config = new List<Parameter>()
-                        {
-                            new Parameter() {Host_val = Host.Text,
-                                             UserName_val = UserName.Text,
-                                             Password_val=Password.Text,
-                                             Local_Path_val=Local_Path.Text,
-                                             Ftp_Path_val= Ftp_Path.Text
-                                             }
-                        };
-                        Config.Save(Student_config);
-                        Logger.WriteLog("儲存參數!", 1, richTextBoxGeneral);
+                        SaveConfig();
                         break;
                     }
 
