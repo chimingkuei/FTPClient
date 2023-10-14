@@ -172,6 +172,7 @@ namespace FTPClient
             return success;
         }
 
+        // 若return false表示檔案不存在
         public bool FileCheckExist(string ftpPath, string ftpName)
         {
             bool success = false;
@@ -216,7 +217,7 @@ namespace FTPClient
             return success;
         }
 
-        // 若資料夾不存在，則建立其資料夾
+        // 若return true表示資料夾不存在，則建立其資料夾
         public bool FolderCheckExist(string ftpPath, string ftpDirName)
         {
             bool success = false;

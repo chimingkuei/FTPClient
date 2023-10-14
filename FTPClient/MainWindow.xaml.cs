@@ -112,83 +112,35 @@ namespace FTPClient
             {
                 case nameof(FileUpload):
                     {
-                        if (System.IO.Path.GetFileNameWithoutExtension(Local_Path.Text) == "Project")
+                        string ftp_last_folder = System.IO.Path.GetFileName(Ftp_Path.Text);
+                        if (System.IO.Path.GetFileName(Local_Path.Text) == ftp_last_folder)
                         {
                             Task.Run(() =>
                             {
                                 FTP Do = new FTP(TextBoxDispatcherGetValue(UserName), TextBoxDispatcherGetValue(Password), TextBoxDispatcherGetValue(IP), "23");
                                 string Ftp_Path_Invokval = TextBoxDispatcherGetValue(Ftp_Path);
                                 int upload_file_number = 0;
-                                if (Directory.Exists(TextBoxDispatcherGetValue(Local_Path)))
+                                foreach (var (dirPath, subDirs, files) in Do.Walk(TextBoxDispatcherGetValue(Local_Path)))
                                 {
-                                    foreach (var (dirPath, subDirs, files) in Do.Walk(TextBoxDispatcherGetValue(Local_Path)))
+                                    Do.FolderCheckExist(Ftp_Path_Invokval, Regex.Split(dirPath, ftp_last_folder)[1].Replace("\\", "/"));
+                                    foreach (string filePath in files)
                                     {
-                                        Do.FolderCheckExist(Ftp_Path_Invokval, Regex.Split(dirPath, "Project")[1].Replace("\\", "/"));
-                                        foreach (string filePath in files)
+                                        bool filestate = Do.FileCheckExist(Ftp_Path_Invokval, Regex.Split(filePath, ftp_last_folder)[1].Replace("\\", "/"));
+                                        if (!filestate)
                                         {
-                                            bool filestate = Do.FileCheckExist(Ftp_Path_Invokval, Regex.Split(filePath, "Project")[1].Replace("\\", "/"));
-                                            if (!filestate)
-                                            {
-                                                Do.FileUpload(new FileInfo(filePath), Ftp_Path_Invokval, Regex.Split(filePath, "Project")[1].Replace("\\", "/"));
-                                                upload_file_number++;
-                                                Console.WriteLine($"FTP建立{Regex.Split(filePath, "Project")[1].Replace("\\", "/") }");
-                                            }
+                                            Do.FileUpload(new FileInfo(filePath), Ftp_Path_Invokval, Regex.Split(filePath, ftp_last_folder)[1].Replace("\\", "/"));
+                                            upload_file_number++;
+                                            Console.WriteLine($"FTP建立{Regex.Split(filePath, ftp_last_folder)[1].Replace("\\", "/")}");
                                         }
                                     }
-                                    Console.WriteLine($"FTP總共上傳{upload_file_number}檔案!");
                                 }
-                                else
-                                {
-                                    MessageBox.Show("請確認本端路徑是否存在!", "警告", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                                }
+                                Console.WriteLine($"FTP總共上傳{upload_file_number}檔案!");
+                                
                             });
-                            #region Old Version
-                            //Task.Run(() =>
-                            //{
-                            //    FTP Do = new FTP(TextBoxDispatcherGetValue(UserName), TextBoxDispatcherGetValue(Password), TextBoxDispatcherGetValue(IP), "23");
-                            //    string Ftp_Path_Invokval = TextBoxDispatcherGetValue(Ftp_Path);
-                            //    int upload_file_number = 0;
-                            //    if (Directory.Exists(TextBoxDispatcherGetValue(Local_Path)))
-                            //    {
-                            //        foreach (var (dirPath, subDirs, files) in Do.Walk(TextBoxDispatcherGetValue(Local_Path)))
-                            //        {
-                            //            bool dirstate = Do.FolderCheckExist(Ftp_Path_Invokval, Regex.Split(dirPath, "Project")[1].Replace("\\", "/"));
-                            //            if (dirstate)
-                            //            {
-                            //                Console.WriteLine($"FTP建立{Regex.Split(dirPath, "Project")[1].Replace("\\", "/")}");
-                            //            }
-                            //            else
-                            //            {
-                            //                Console.WriteLine($"FTP已有{Regex.Split(dirPath, "Project")[1].Replace("\\", "/")}");
-                            //            }
-                            //            //Console.WriteLine("目錄：" + Regex.Split(dirPath, "Project")[1].Replace("\\", "/"));
-                            //            foreach (string filePath in files)
-                            //            {
-                            //                bool filestate = Do.FileCheckExist(Ftp_Path_Invokval, Regex.Split(filePath, "Project")[1].Replace("\\", "/"));
-                            //                if (filestate)
-                            //                {
-                            //                    Console.WriteLine($"FTP已有{Regex.Split(filePath, "Project")[1].Replace("\\", "/") }");
-                            //                }
-                            //                else
-                            //                {
-                            //                    Do.FileUpload(new FileInfo(filePath), Ftp_Path_Invokval, Regex.Split(filePath, "Project")[1].Replace("\\", "/"));
-                            //                    upload_file_number++;
-                            //                    Console.WriteLine($"FTP建立{Regex.Split(filePath, "Project")[1].Replace("\\", "/") }");
-                            //                }
-                            //                //Console.WriteLine("文件：" + Regex.Split(filePath, "Project")[1].Replace("\\", "/"));
-                            //            }
-                            //        }
-                            //    }
-                            //    else
-                            //    {
-                            //        MessageBox.Show("請確認本端路徑是否存在!", "警告", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                            //    }
-                            //});
-                            #endregion
                         }
                         else
                         {
-                            MessageBox.Show("請確認上傳路徑是.../Project!", "警告", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                            MessageBox.Show("請確認本端與上傳ftp路徑最後一層資料夾名稱相同!", "警告", MessageBoxButton.YesNo, MessageBoxImage.Question);
                         }
                         break;
                     }
