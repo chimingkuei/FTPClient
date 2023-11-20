@@ -10,11 +10,8 @@
         ResizeMode="CanMinimize"
         Title="FTPClient" Height="700" Width="1000" Background="#FF3E6FB3" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
-        <TabControl x:Name="Log" HorizontalAlignment="Left" Height="148" Margin="3,7,0,0" VerticalAlignment="Top" Width="786" Background="#FFE6F0FF" Grid.Row="1">
+        <Image x:Name="Logo" HorizontalAlignment="Left" Height="141" Margin="814,513,0,0" VerticalAlignment="Top" Width="159" Source="/Icon/ftp.png"/>
+        <TabControl x:Name="Log" HorizontalAlignment="Left" Height="172" Margin="5,485,0,0" VerticalAlignment="Top" Width="790" Background="#FFE6F0FF">
             <TabControl.Resources>
                 <Style TargetType="RichTextBox">
                     <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
@@ -40,7 +37,7 @@
                 <RichTextBox x:Name="richTextBoxDebug" Background="#FF4396BF"/>
             </TabItem>
         </TabControl>
-        <TabControl HorizontalAlignment="Left" Margin="5,8,0,0" VerticalAlignment="Top" Height="478" Width="978" Background="#FFE6F0FF" Grid.Row="0">
+        <TabControl HorizontalAlignment="Left" Margin="5,3,0,0" VerticalAlignment="Top" Height="478" Width="978" Background="#FFE6F0FF">
             <TabItem Header="主畫面" Style="{StaticResource BaseTabcontrol}">
                 <Grid>
                     <StackPanel Orientation="Horizontal" Margin="0,80,1,307">
@@ -61,7 +58,7 @@
                         <TextBox x:Name="Ftp_Path" Style="{StaticResource BaseTextBox6}" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="544" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,20,0,20"/>
                         <Button x:Name="Save_Config" Style="{StaticResource BaseButton}" Content="儲存參數" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="34" Margin="340,10,0,10" Click="Main_Btn_Click"/>
                         <Button x:Name="FileUpload" Style="{StaticResource BaseButton}" Content="檔案上傳" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Height="34"  Margin="90,10,0,10" Click="Main_Btn_Click"/>
-                     </WrapPanel>
+                    </WrapPanel>
                 </Grid>
             </TabItem>
         </TabControl>

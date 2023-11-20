@@ -88,3 +88,6 @@ D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.Properties.Reso
 D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.csproj.GenerateResource.cache
 D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.csproj.CoreCompileInputs.cache
 D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.csproj.CopyComplete
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\ShellProgressBar.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\System.Text.Encoding.CodePages.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\ShellProgressBar.xml
