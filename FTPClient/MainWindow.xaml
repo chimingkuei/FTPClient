@@ -10,7 +10,7 @@
         ResizeMode="CanMinimize"
         Title="FTPClient" Height="700" Width="1000" Background="#FF3E6FB3" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
-        <Image x:Name="Logo" HorizontalAlignment="Left" Height="141" Margin="814,513,0,0" VerticalAlignment="Top" Width="159" Source="/Icon/ftp.png"/>
+        <Image x:Name="Logo" HorizontalAlignment="Left" Height="141" Margin="814,513,0,0" VerticalAlignment="Top" Width="159" Source="Icon/ftp.png"/>
         <TabControl x:Name="Log" HorizontalAlignment="Left" Height="172" Margin="5,485,0,0" VerticalAlignment="Top" Width="790" Background="#FFE6F0FF">
             <TabControl.Resources>
                 <Style TargetType="RichTextBox">
