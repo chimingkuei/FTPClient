@@ -1,0 +1,93 @@
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\FTPClient.exe.config
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\FTPClient.exe
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\FTPClient.pdb
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Xceed.Wpf.Toolkit.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\nl-BE\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.csproj.AssemblyReference.cache
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\ButtonStyles.baml
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\CheckBoxStyles.baml
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\ComboBoxStyles.baml
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\GroupBoxStyles.baml
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\RadioButtonStyles.baml
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\SliderStyles.baml
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\TabControlStyles.baml
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\TextBoxStyles.baml
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\MainWindow.g.cs
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\App.g.cs
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient_MarkupCompile.cache
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient_MarkupCompile.lref
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\App.baml
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\MainWindow.baml
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.g.resources
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.Properties.Resources.resources
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.csproj.GenerateResource.cache
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.csproj.CoreCompileInputs.cache
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.csproj.CopyComplete
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.exe
+C:\Data Disk\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.pdb
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.csproj.AssemblyReference.cache
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\ButtonStyles.baml
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\CheckBoxStyles.baml
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\ComboBoxStyles.baml
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\GroupBoxStyles.baml
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\RadioButtonStyles.baml
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\SliderStyles.baml
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\TabControlStyles.baml
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\UI\TextBoxStyles.baml
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\MainWindow.g.cs
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\App.g.cs
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient_MarkupCompile.cache
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient_MarkupCompile.lref
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.exe
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.pdb
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\FTPClient.exe.config
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\FTPClient.exe
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\FTPClient.pdb
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Newtonsoft.Json.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Xceed.Wpf.AvalonDock.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Xceed.Wpf.Toolkit.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\Newtonsoft.Json.xml
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\nl-BE\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\App.baml
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\MainWindow.baml
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.g.resources
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.Properties.Resources.resources
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.csproj.GenerateResource.cache
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.csproj.CoreCompileInputs.cache
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\ShellProgressBar.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\System.Text.Encoding.CodePages.dll
+D:\Chimingkuei\repos\FTPClient\FTPClient\bin\x64\Debug\ShellProgressBar.xml
+D:\Chimingkuei\repos\FTPClient\FTPClient\obj\x64\Debug\FTPClient.csproj.Up2Date
